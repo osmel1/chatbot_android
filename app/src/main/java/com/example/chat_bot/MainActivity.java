@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                     String message = messageET.getText().toString();
                     messages.add(new MessageModel(message,"user"));
                     chatBotAdapter.notifyDataSetChanged();
-                    String url = "get?bid=181511&key=DF7Mqqg5MzwaFoJo&uid=[uid]&msg="+message;
+                    String url = "get?bid=181511&key=VOTRE_KEY&uid=[uid]&msg="+message;
                     Call<BrainShopResponse> call = brainShopApi.getMessage(url);
                     call.enqueue(new retrofit2.Callback<BrainShopResponse>() {
                         @SuppressLint("NotifyDataSetChanged")
